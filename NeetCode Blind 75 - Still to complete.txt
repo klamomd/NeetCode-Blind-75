@@ -40,5 +40,4 @@ Still to complete:
 	70 - Set Matrix Zeroes
 
 18 - Bit Manipulation
-	73 - Reverse Bits
 	75 - Sum of Two Integers
