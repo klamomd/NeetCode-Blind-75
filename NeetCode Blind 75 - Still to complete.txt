@@ -5,9 +5,6 @@ Still to complete:
 	14 - Longest Repeating Character Replacement
 	15 - Minimum Window Substring
 
-07 - Trees
-	34 - Binary Tree Maximum Path Sum
-
 10 - Tries
 	40 - Design Add And Search Words Data Structure
 	41 - Word Search II
