@@ -7,7 +7,6 @@ Still to complete:
 
 07 - Trees
 	34 - Binary Tree Maximum Path Sum
-	35 - Serialize And Deserialize Binary Tree
 
 10 - Tries
 	40 - Design Add And Search Words Data Structure
