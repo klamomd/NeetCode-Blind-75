@@ -31,8 +31,5 @@ Still to complete:
 	65 - Non Overlapping Intervals
 	67 - Meeting Rooms II
 
-17 - Math & Geometry
-	70 - Set Matrix Zeroes
-
 18 - Bit Manipulation
 	75 - Sum of Two Integers
