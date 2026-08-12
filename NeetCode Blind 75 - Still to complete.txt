@@ -22,7 +22,6 @@ Still to complete:
 
 14 - 2-D Dynamic Programming
 	59 - Unique Paths
-	60 - Longest Common Subsequence
 
 16 - Intervals
 	63 - Insert Interval
