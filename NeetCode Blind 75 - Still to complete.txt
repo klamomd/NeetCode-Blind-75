@@ -11,7 +11,6 @@ Still to complete:
 
 11 - Graphs
 	44 - Pacific Atlantic Water Flow
-	45 - Course Schedule
 	46 - Graph Valid Tree
 	47 - Number of Connected Components In An Undirected Graph
 
