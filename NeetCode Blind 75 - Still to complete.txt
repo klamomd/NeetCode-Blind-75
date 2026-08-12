@@ -17,9 +17,6 @@ Still to complete:
 12 - Advanced Graphs
 	48 Alien Dictionary
 
-13 - 1-D Dynamic Programming
-	58 - Longest Increasing Subsequence
-
 14 - 2-D Dynamic Programming
 	59 - Unique Paths
 
