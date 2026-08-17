@@ -6,7 +6,6 @@ Still to complete:
 	15 - Minimum Window Substring
 
 10 - Tries
-	40 - Design Add And Search Words Data Structure
 	41 - Word Search II
 
 11 - Graphs
