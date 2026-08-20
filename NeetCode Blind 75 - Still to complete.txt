@@ -2,7 +2,6 @@ Still to complete:
 ==
 
 03 - Sliding Window
-	14 - Longest Repeating Character Replacement
 	15 - Minimum Window Substring
 
 10 - Tries
