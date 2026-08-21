@@ -7,7 +7,10 @@ public class Solution {
 		}
 		
 		// Minimum window substring found.
-		string minString = null;
+		ReadOnlySpan<char> minString = ReadOnlySpan<char>.Empty;
+		
+		// ReadOnlySpan of s, to make grabbing substrings more efficient (for test cases with huge strings).
+		ReadOnlySpan<char> sSpan = s.AsSpan();
 		
 		// Number of characters left to find in s.
 		int charsLeft = t.Length;
@@ -19,9 +22,9 @@ public class Solution {
 		Dictionary<char, int> remaining = t
 			.GroupBy(c => c)
 			.ToDictionary(g => g.Key, g => g.Count());
-			
+		
 		// Increment left pointer until we find the first character from T.
-		while (l < s.Length)
+		while (l < sSpan.Length)
 		{
 			if (remaining.ContainsKey(s[l]))
 			{
@@ -32,7 +35,7 @@ public class Solution {
 		}
 		
 		// EDGE CASE: If left pointer is now OOB, there are no characters from T in S.
-		if (l >= s.Length)
+		if (l >= sSpan.Length)
 		{
 			return "";
 		}
@@ -41,10 +44,10 @@ public class Solution {
 		r = l;
 		
 		// Loop until R falls OOB.
-		while (l < s.Length && r < s.Length)
+		while (l < sSpan.Length && r < sSpan.Length)
 		{
 			// GROW:
-			while (r < s.Length && charsLeft > 0)
+			while (r < sSpan.Length && charsLeft > 0)
 			{
 				// Matching character found at R.
 				if (remaining.ContainsKey(s[r]))
@@ -62,9 +65,9 @@ public class Solution {
 				if (charsLeft == 0) {
 					// Update best if appropriate.
 					int currentLength = r - l + 1;
-					if (minString == null || currentLength < minString.Length)
+					if (minString.IsEmpty || currentLength < minString.Length)
 					{
-						minString = s.Substring(l, currentLength);
+						minString = sSpan.Slice(l, currentLength);
 					}
 					
 					// Break out of the "grow" loop.
@@ -76,13 +79,13 @@ public class Solution {
 			}
 			
 			// If R fell OOB, then the current substring does not contain all chars in T, and we can skip the "shrink" loop.
-			if (r >= s.Length)
+			if (r >= sSpan.Length)
 			{
 				break;
 			}
 				
 			// SHRINK:
-			while (l < s.Length && charsLeft == 0) {
+			while (l < sSpan.Length && charsLeft == 0) {
 				// Remove the character at L from the substring.
 				// If the character exists in T, update the remaining count.
 				if (remaining.ContainsKey(s[l])) {
@@ -101,9 +104,9 @@ public class Solution {
 				if (charsLeft == 0) {
 					// Update best if appropriate.
 					int currentLength = r - l + 1;
-					if (minString == null || currentLength < minString.Length)
+					if (minString.IsEmpty || currentLength < minString.Length)
 					{
-						minString = s.Substring(l, currentLength);
+						minString = sSpan.Slice(l, currentLength);
 					}
 				}
 			}
@@ -112,6 +115,6 @@ public class Solution {
 			r++;
 		}
 		
-		return minString == null ? "" : minString;
+		return minString.IsEmpty ? "" : minString.ToString();
 	}
 }

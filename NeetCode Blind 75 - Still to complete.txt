@@ -1,9 +1,6 @@
 Still to complete:
 ==
 
-03 - Sliding Window
-	15 - Minimum Window Substring
-
 10 - Tries
 	41 - Word Search II
 
