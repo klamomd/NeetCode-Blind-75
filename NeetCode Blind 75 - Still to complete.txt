@@ -12,9 +12,6 @@ Still to complete:
 12 - Advanced Graphs
 	48 Alien Dictionary
 
-14 - 2-D Dynamic Programming
-	59 - Unique Paths
-
 16 - Intervals
 	63 - Insert Interval
 	64 - Merge Intervals
