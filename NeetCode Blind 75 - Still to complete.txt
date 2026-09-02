@@ -12,6 +12,5 @@ Still to complete:
 	48 Alien Dictionary
 
 16 - Intervals
-	63 - Insert Interval
 	64 - Merge Intervals
 	67 - Meeting Rooms II
