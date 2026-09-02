@@ -11,5 +11,4 @@ Still to complete:
 	48 Alien Dictionary
 
 16 - Intervals
-	64 - Merge Intervals
 	67 - Meeting Rooms II
